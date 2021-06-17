@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1>hello, I am {data.me[0].name}</h1>
-        <h1>This is {data.me[0].name}`s portFolio</h1>
+        <h1>This is {data.me[0].name} portFolio</h1>
         <JsonComponent json={data.me[0]} />
       </main>
 

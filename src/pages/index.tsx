@@ -4,7 +4,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useQuery, gql } from "@apollo/client";
 import React from "react";
-import { Json } from "../components/Json"
+import dynamic from "next/dynamic";
+import { Json } from "../components/Json";
 
 const Home: NextPage = () => {
   const query = gql`
@@ -46,6 +47,10 @@ const Home: NextPage = () => {
     return <p>:( an error happened</p>;
   }
 
+  const JsonComponent = dynamic(
+    () => import("../components/Json").then((modules) => modules.Json),
+    { ssr: false }
+  );
 
   return (
     <div className={styles.container}>
@@ -58,7 +63,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1>hello, I am {data.me[0].name}</h1>
         <h1>This is {data.me[0].name}`s portFolio</h1>
-        <Json json={data.me[0]}/>
+        <JsonComponent json={data.me[0]} />
       </main>
 
       <style jsx>

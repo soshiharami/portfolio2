@@ -24,6 +24,11 @@
   align-items: center;
 }
 
+.soshikun {
+    font-weight: 700;
+    margin: 0.3rem;
+}
+
 .footer a {
   display: flex;
   justify-content: center;

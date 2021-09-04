@@ -49,8 +49,6 @@ const Home: NextPage = () => {
 
     const me: me = data.me[0];
 
-    console.log(me)
-
     return (
         <div className={styles.container}>
             <Head>

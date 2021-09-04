@@ -9,7 +9,7 @@ interface props {
 export const Contact: FC<props> = ({contact}) => {
     return (
         <a href={contact.url} className={style.contact}>
-            {contact.name}
+            {contact.name + " >"}
         </a>
     )
 }

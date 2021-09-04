@@ -1,13 +1,16 @@
 import Head from "next/head";
 import {NextPage} from "next";
 import styles from "../styles/Home.module.css";
+import {Curl} from "../components/Curl";
 import {useQuery, gql} from "@apollo/client";
-import React from "react";
+import React, {useState} from "react";
 import {Skills} from "../components/Skills";
 import {Contacts} from "../components/Contacts";
 import {me} from "../types/Me";
 
 const Home: NextPage = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+
     const query = gql`
     query {
       me {
@@ -47,6 +50,10 @@ const Home: NextPage = () => {
         return <p>:( an error happened</p>;
     }
 
+    const swichLoading = () => {
+        setIsLoading(false)
+    }
+
     const me: me = data.me[0];
 
     return (
@@ -57,17 +64,26 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <h1>hello, I am {me.name}</h1>
-                <h1>This is {me.name} portFolio</h1>
-                <Skills skills={me.skills} />
-                <Contacts contacts={me.contact} />
-            </main>
+            {!isLoading ?
+                <>
+                    <main className={styles.main}>
+                        <div className={styles.hello}>
+                            <h1>hello, I am {me.name}</h1>
+                        </div>
+                        <Skills skills={me.skills} />
+                        <Contacts contacts={me.contact} />
+                    </main>
 
-            <footer className={styles.footer}>
-                Powered by
-                <p className={styles.soshikun}>そうしくん！</p>
-            </footer>
+                    <footer className={styles.footer}>
+                        Powered by
+                        <p className={styles.soshikun}>そうしくん！</p>
+                    </footer>
+                </>
+                :
+                <main>
+                    <Curl swichLoading={swichLoading} />
+                </main>
+            }
         </div>
     );
 };

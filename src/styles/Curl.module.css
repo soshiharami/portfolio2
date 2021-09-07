@@ -1,0 +1,14 @@
+.type {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 0;
+    position: absolute;
+    font-size: 15px;
+    font-weight: 1000;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 0.1rem solid #ffbbc6;
+}
+

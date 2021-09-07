@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 import ReactJson from "react-json-view"
 
 interface props {
-  json: Object;
+    json: Object;
 };
 
-export const Json: FC<props> = ({json}) =>{
+export const Json: FC<props> = ({json}) => {
 
-  return(
-    <ReactJson src={json}/>
-  )
+    return (
+        <ReactJson src={json} />
+    )
 }

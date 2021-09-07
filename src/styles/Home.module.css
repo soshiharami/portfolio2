@@ -7,7 +7,6 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -125,8 +124,22 @@
 }
 
 .hello {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+}
 
+.iam {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.icon {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  border-radius: 50%;
 }

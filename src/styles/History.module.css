@@ -1,0 +1,9 @@
+.history {
+  width: 50%;
+  line-break: anywhere;
+  border: 1rm solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0.3rem;
+  background-color: #ffbbc6;
+}

@@ -59,41 +59,39 @@ const Home: NextPage = () => {
   const me: me = data.me[0];
 
   return (
-    <html lang={"ja"}>
-      <div className={styles.container}>
-        <Head>
-          <title>Soshi portfolio</title>
-          <meta name="description" content="soshi harami portfolio" />
-          <link rel="icon" href="/rentyon.jpg" />
-        </Head>
-        {!isLoading ? (
-          <>
-            <main className={styles.main}>
-              <div className={styles.hello}>
-                <Image
-                  src={"/rentyon.jpg"}
-                  width={200}
-                  height={200}
-                  alt={"icon"}
-                />
-                <h1 className={styles.iam}>hello, I am {me.name}</h1>
-              </div>
-              <Skills skills={me.skills} />
-              <Contacts contacts={me.contact} />
-              <Histories histories={me.histories} />
-            </main>
-            <footer className={styles.footer}>
-              Powered by
-              <p className={styles.soshikun}>そうしくん！</p>
-            </footer>
-          </>
-        ) : (
-          <main>
-            <Curl swichLoading={swichLoading} />
+    <div className={styles.container}>
+      <Head>
+        <title>Soshi portfolio</title>
+        <meta name="description" content="soshi harami portfolio" />
+        <link rel="icon" href="/rentyon.jpg" />
+      </Head>
+      {!isLoading ? (
+        <>
+          <main className={styles.main}>
+            <div className={styles.hello}>
+              <Image
+                src={"/rentyon.jpg"}
+                width={200}
+                height={200}
+                alt={"icon"}
+              />
+              <h1 className={styles.iam}>hello, I am {me.name}</h1>
+            </div>
+            <Skills skills={me.skills} />
+            <Contacts contacts={me.contact} />
+            <Histories histories={me.histories} />
           </main>
-        )}
-      </div>
-    </html>
+          <footer className={styles.footer}>
+            Powered by
+            <p className={styles.soshikun}>そうしくん！</p>
+          </footer>
+        </>
+      ) : (
+        <main>
+          <Curl swichLoading={swichLoading} />
+        </main>
+      )}
+    </div>
   );
 };
 

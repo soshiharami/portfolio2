@@ -10,7 +10,7 @@ interface props {
 export const Histories: FC<props> = ({ histories }) => {
   return (
     <div className={style.main}>
-      <h2>Contacts</h2>
+      <h2>Histories</h2>
       <div className={style.histories}>
         {histories.map((history, index) => (
           <History history={history} key={index} />

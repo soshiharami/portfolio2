@@ -1,4 +1,4 @@
 export interface skillType {
-    id: number,
-    name: string,
+  id: number;
+  name: string;
 }

@@ -1,7 +1,7 @@
-import {skillType} from "./SkillType"
+import { skillType } from "./SkillType";
 
 export interface skill {
-    id: number,
-    name: string,
-    types: skillType,
+  id: number;
+  name: string;
+  types: skillType;
 }

@@ -1,11 +1,11 @@
 .contact {
-    border: 1rm solid black;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 0.3rem;
-    background-color: #ffbbc6;
+  border: 1rm solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0.3rem;
+  background-color: #ffbbc6;
 }
 
 .contact:hover {
-    border: 1px solid black;
+  border: 1px solid black;
 }

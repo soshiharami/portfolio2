@@ -68,14 +68,12 @@ const Home: NextPage = () => {
         <>
           <main className={styles.main}>
             <div className={styles.hello}>
-              <div className={styles.icon}>
-                <Image
-                  src={"/rentyon.jpg"}
-                  width={200}
-                  height={200}
-                  alt={"icon"}
-                />
-              </div>
+              <Image
+                src={"/rentyon.jpg"}
+                width={200}
+                height={200}
+                alt={"icon"}
+              />
               <h1 className={styles.iam}>hello, I am {me.name}</h1>
             </div>
             <Skills skills={me.skills} />

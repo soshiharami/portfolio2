@@ -7,6 +7,7 @@ import { useQuery, gql } from "@apollo/client";
 import React, { useState } from "react";
 import { Skills } from "../components/Skills";
 import { Contacts } from "../components/Contacts";
+import { Histories } from "../components/Histories";
 import { me } from "../types/Me";
 
 const Home: NextPage = () => {
@@ -78,6 +79,7 @@ const Home: NextPage = () => {
             </div>
             <Skills skills={me.skills} />
             <Contacts contacts={me.contact} />
+            <Histories histories={me.histories} />
           </main>
           <footer className={styles.footer}>
             Powered by

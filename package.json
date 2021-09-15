@@ -13,6 +13,22 @@
         "fix": "run-s lint format",
         "check": "run-p *:check"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "linters": {
+            "*.js": [
+                "eslint --fix",
+                "git add"
+            ]
+        },
+        "ignore": [
+            "dist/**/*"
+        ]
+    },
     "dependencies": {
         "@apollo/client": "^3.3.20",
         "@types/node": "^15.12.2",
@@ -20,6 +36,8 @@
         "@types/react-typist": "^2.0.2",
         "eslint-config-prettier": "^8.3.0",
         "graphql": "^15.5.0",
+        "husky": "^7.0.2",
+        "lint-staged": "^11.1.2",
         "next": "11.0.0",
         "prettier": "^2.4.0",
         "react": "17.0.2",

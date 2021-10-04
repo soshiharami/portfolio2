@@ -3,7 +3,7 @@
  services:
    app:
      image: node:12-alpine
-     command: sh -c "yarn install && yarn dev"
+     command: sh -c "yarn install && yarn build && yarn start"
      ports:
        - 1111:3000
      working_dir: /app
@@ -11,9 +11,9 @@
        - ./:/app
      restart: always
      expose: ["3000"]
+     network_mode: bridge
      environment:
        VIRTUAL_PORT: 1111
        VIRTUAL_HOST: "www.soshiharami.com"
        LETSENCRYPT_HOST: "www.soshiharami.com"
        LETSENCRYPT_EMAIL: "soshi@soshiharami.com"
-     network_mode: "bridge"

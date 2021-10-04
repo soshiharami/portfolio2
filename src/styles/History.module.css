@@ -1,9 +1,9 @@
 .history {
   width: 75%;
   line-break: anywhere;
-  border: 1rm solid black;
+  border: 5px solid #ffcbd6;
   border-radius: 10px;
   padding: 20px;
   margin: 0.3rem;
-  background-color: #ffbbc6;
+  background-color:rgba(255, 187, 198, 0.3);
 }

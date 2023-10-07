@@ -10,7 +10,7 @@ export const History: FC<props> = ({ history }) => {
   return (
     <div className={style.history}>
       <h4>{history.title}</h4>
-      <p>{history.time}</p>
+      <p>{history.time.toString()}</p>
       <p>{history.about}</p>
     </div>
   );
